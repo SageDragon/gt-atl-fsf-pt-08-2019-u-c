@@ -24,7 +24,18 @@
             * with a quote said by them -->
 
     <!-- **************************************** -->
-
+      <button data-person="George Clooney">
+          The only failure is not to try
+      </button>
+      <button data-person="Cameron Diaz">
+          Your regrets aren't what you did, but what you didn't do. So I take every opportunity
+      </button>
+      <button data-person="Denzel Washington">
+          I say luck is when an opportunity comes along and you're prepared for it
+      </button>
+      <button data-person="Angelina Jolie">
+          If you don’t get out of the box you’ve been raised in, you won’t understand how much bigger the world is.
+      </button>
     <!-- YOUR BUTTONS GO HERE!!!!!! Delete this comment and put your buttons here.  -->
 
     <!-- **************************************** -->
@@ -44,7 +55,7 @@
     $("button").on("click", function() {
       var person = $(this).attr("data-person");
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+        person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10&rating=r";
 
       $.ajax({
         url: queryURL,

@@ -7,17 +7,50 @@
 </head>
 
 <body>
+
+    <div class="container">
+        <div class="row">
+          GIFS N' STUFF
+        </div>
+        <div id="row1" class="row">
+    
+        </div>
+    
+      </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // Example queryURL for Giphy API
     var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
 
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).then(function(response) {
+    //   console.log(response);
+
+
+    // });
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) {
+      for (var i = 0; i < response.data.length; i++){
+        var newRow = $("<img>");
+        newRow.attr("src", response.data[i].images.original.url);
+        $(".container").append(newRow)
+        var newDiv = $("<div>");
+          newDiv.text(response.data[i].slug)
+        $(".container").append(newDiv)
+        
+      }
+      // var newRow = $("<img>");
+      //   newRow.attr("src", response.data[1].bitly_gif_url);
+      //   $(".container").append(newRow)
       console.log(response);
+
     });
+
   </script>
 
 </body>

@@ -36,15 +36,33 @@
 
       // Function for displaying movie data
       function renderButtons() {
-
+        $("#buttons-view").empty()
         // YOUR CODE GOES HERE
+        for (var i = 0; i < movies.length; i++){
+          console.log(i)
+          var button = $("<button>")
+          button.text(movies[i])
+          $("#buttons-view").append(button)
 
+        }
+        
+        // Iterate over the array
+        // Create a button
+
+        // Add movie text to button
+        // Append the button to the button view
       }
 
       // This function handles events where one button is clicked
-      $("#add-movie").on("click", function() {
-
+      $("#add-movie").on("click", function(events) {
+        events.preventDefault()
         // YOUR CODE GOES HERE
+        // Save user movie input as variable
+        // Add movie to movies array
+        // renderButtons
+        var movieTitle = $("#movie-input").val()
+        movies.push(movieTitle)
+        renderButtons()
 
       });
 

@@ -78,8 +78,41 @@
 $(document).ready(function() {
 
 // Your code here...
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = [];
+let result = [];
+let isOperatorChosen = false;
+let isCalculated = false;
+
+initializeCalculator();
+
+$(".number").on("click", function (i){
+  var i = this.value;
+  console.log(i)
+
+  if (isOperatorChosen) {
+      firstNumber += $(this).val();
+  } else {
+
+  }
+
+  $("#first-number").text(firstNumber);
+  $("#second-number").text(secondNumber);
+ 
+});
 
 
+$(".clear").on("click",function())
+
+function initializeCalculator () {
+  firstNumber = "";
+  secondNumber = "";
+  isOperatorChosen = false;
+  isCalculated = false;
+}
+
+$("#first-number #second-number #operator").empty();
 });
 
 </script>

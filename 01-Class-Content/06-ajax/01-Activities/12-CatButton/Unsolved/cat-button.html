@@ -12,13 +12,13 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-    //
+    // Adding an event listener
     $("#cat-button").on("click", function() {
 
-      //
+      // Calls data from the api
       var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=cats";
 
-      //
+      //Gets random gif with the 'cats' tag from api
       $.ajax({
         url: queryURL,
         method: "GET"

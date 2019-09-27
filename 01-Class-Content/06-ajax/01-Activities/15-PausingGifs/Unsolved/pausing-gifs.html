@@ -26,6 +26,8 @@
 
       // CODE GOES HERE
 
+      var state = $(this).attr("data-state");
+
       // =============================================
 
       // STEP THREE: Check if the variable state is equal to 'still',
@@ -37,6 +39,16 @@
       // ============== FILL IN CODE HERE FOR STEP THREE =========================
 
       // CODE GOES HERE
+      if (state === "animate"){
+        $(this).attr("data-state", "still");
+        console.log("Still")
+        $(this).attr("src",$(this).attr("data-still"));
+      }else{
+        $(this).attr("data-state", "animate");
+        console.log("Animate")
+        $(this).attr("src",$(this).attr("data-animate"));
+
+      }
 
       // ==============================================
 
